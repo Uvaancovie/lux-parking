@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -101,6 +100,28 @@ const mockEvents = [
     date: "Nov 26 - Dec 3, 2023",
     parkingZones: 5,
     priceRange: "R250 - R750",
+  },
+  {
+    id: 9,
+    title: "Ultra Music Festival Cape Town",
+    type: "Festivals",
+    image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+    city: "Cape Town",
+    venue: "Green Point Stadium",
+    date: "Dec 15 - Dec 17, 2023",
+    parkingZones: 7,
+    priceRange: "R500 - R1500",
+  },
+  {
+    id: 10,
+    title: "Ultra Music Festival Johannesburg",
+    type: "Festivals",
+    image: "https://images.unsplash.com/photo-1523784060441-4a4de6ffc5a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+    city: "Johannesburg",
+    venue: "Moses Mabhida Stadium",
+    date: "Jan 20 - Jan 22, 2024",
+    parkingZones: 8,
+    priceRange: "R550 - R1600",
   }
 ];
 
