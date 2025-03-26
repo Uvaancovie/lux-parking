@@ -1,7 +1,6 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
-import { Diamond } from "lucide-react";
+import { Diamond, Mail } from "lucide-react";
 
 const Footer: React.FC = () => {
   return (
@@ -74,9 +73,17 @@ const Footer: React.FC = () => {
             <h4 className="font-medium mb-4 text-sm tracking-widest uppercase text-muted-foreground">Contact</h4>
             <ul className="space-y-2">
               <li className="flex items-center gap-2 text-sm text-foreground/80">
-                <span>Email:</span>
-                <a href="mailto:concierge@luxpark.com" className="hover:text-primary transition-colors">
-                  concierge@luxpark.com
+                <Mail size={16} className="text-primary" />
+                <span>Info:</span>
+                <a href="mailto:info@luxpark.co.za" className="hover:text-primary transition-colors">
+                  info@luxpark.co.za
+                </a>
+              </li>
+              <li className="flex items-center gap-2 text-sm text-foreground/80">
+                <Mail size={16} className="text-primary" />
+                <span>Bookings:</span>
+                <a href="mailto:bookings@luxpark.co.za" className="hover:text-primary transition-colors">
+                  bookings@luxpark.co.za
                 </a>
               </li>
               <li className="flex items-center gap-2 text-sm text-foreground/80">
