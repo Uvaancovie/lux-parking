@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -63,18 +62,17 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-                // Luxury specific colors - enhanced gold palette
-                gold: {
-                    DEFAULT: '#d4af37',
-                    light: '#f8df76',
-                    dark: '#b3941f',
-                    muted: 'rgba(212, 175, 55, 0.6)'
-                },
-                black: {
-                    DEFAULT: '#121212',
-                    light: '#222222',
-                    dark: '#080808'
-                }
+				gold: {
+					DEFAULT: '#8B6D4F',
+					light: '#C2A979',
+					dark: '#5D4037',
+					muted: 'rgba(139, 109, 79, 0.6)'
+				},
+				black: {
+					DEFAULT: '#0A0A0A',
+					light: '#1A1A1A',
+					dark: '#000000'
+				}
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -150,22 +148,22 @@ export default {
 						opacity: '0.8'
 					}
 				},
-                'shimmer': {
-                    '0%': {
-                        backgroundPosition: '-100% 0'
-                    },
-                    '100%': {
-                        backgroundPosition: '200% 0'
-                    }
-                },
-                'gold-pulse': {
-                    '0%, 100%': {
-                        boxShadow: '0 0 15px rgba(212, 175, 55, 0.5)'
-                    },
-                    '50%': {
-                        boxShadow: '0 0 25px rgba(212, 175, 55, 0.8)'
-                    }
-                }
+				'shimmer': {
+					'0%': {
+						backgroundPosition: '-100% 0'
+					},
+					'100%': {
+						backgroundPosition: '200% 0'
+					}
+				},
+				'gold-pulse': {
+					'0%, 100%': {
+						boxShadow: '0 0 15px rgba(212, 175, 55, 0.5)'
+					},
+					'50%': {
+						boxShadow: '0 0 25px rgba(212, 175, 55, 0.8)'
+					}
+				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -176,8 +174,8 @@ export default {
 				'slide-in-left': 'slide-in-left 0.6s ease-out',
 				'blur-in': 'blur-in 0.6s ease-out',
 				'pulse-soft': 'pulse-soft 3s infinite ease-in-out',
-                'shimmer': 'shimmer 2s infinite linear',
-                'gold-pulse': 'gold-pulse 3s infinite ease-in-out'
+				'shimmer': 'shimmer 2s infinite linear',
+				'gold-pulse': 'gold-pulse 3s infinite ease-in-out'
 			},
 			boxShadow: {
 				'glass': '0 8px 32px 0 rgba(212, 175, 55, 0.07)',
@@ -185,25 +183,25 @@ export default {
 				'glass-lg': '0 12px 48px 0 rgba(212, 175, 55, 0.10)',
 				'neu': '10px 10px 20px #0a0a0a, -10px -10px 20px #1e1e1e',
 				'neu-sm': '5px 5px 10px #0a0a0a, -5px -5px 10px #1e1e1e',
-                'luxury': '0 10px 30px rgba(0, 0, 0, 0.3), 0 1px 8px rgba(212, 175, 55, 0.2)',
-                'gold': '0 0 15px rgba(212, 175, 55, 0.5)'
+				'luxury': '0 10px 30px rgba(0, 0, 0, 0.3), 0 1px 8px rgba(212, 175, 55, 0.2)',
+				'gold': '0 0 15px rgba(212, 175, 55, 0.5)'
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 				'gradient-dots': 'radial-gradient(rgba(212, 175, 55, 0.1) 1px, transparent 1px)',
 				'noise': "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E\")",
-                'luxury-gradient': 'linear-gradient(135deg, #121212 0%, #2d2d2d 100%)',
-                'gold-gradient': 'linear-gradient(135deg, #d4af37 0%, #f8df76 100%)'
+				'luxury-gradient': 'linear-gradient(135deg, #121212 0%, #2d2d2d 100%)',
+				'gold-gradient': 'linear-gradient(135deg, #d4af37 0%, #f8df76 100%)'
 			},
 			backdropBlur: {
 				'xs': '2px',
 			},
-            letterSpacing: {
-                'widest': '0.2em'
-            },
-            fontFamily: {
-                sans: ['Inter', 'system-ui', 'sans-serif'],
-            }
+			letterSpacing: {
+				'widest': '0.2em'
+			},
+			fontFamily: {
+				sans: ['Inter', 'system-ui', 'sans-serif'],
+			}
 		}
 	},
 	plugins: [require("tailwindcss-animate")],

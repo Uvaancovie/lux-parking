@@ -1,78 +1,36 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 220 20% 6%;
+    --background: 220 20% 3%;
     --foreground: 48 30% 90%;
 
-    --card: 220 20% 10%;
+    --card: 220 20% 6%;
     --card-foreground: 48 30% 90%;
 
-    --popover: 220 20% 10%;
-    --popover-foreground: 48 30% 90%;
-
-    --primary: 45 80% 60%;
+    --primary: 45 60% 40%;
     --primary-foreground: 220 40% 10%;
 
-    --secondary: 220 15% 15%;
+    --secondary: 220 10% 10%;
     --secondary-foreground: 48 30% 90%;
 
-    --muted: 220 15% 15%;
-    --muted-foreground: 45 30% 70%;
-
-    --accent: 45 60% 50%;
+    --accent: 45 50% 30%;
     --accent-foreground: 220 40% 10%;
-
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 45 30% 30%;
-    --input: 45 30% 30%;
-    --ring: 45 70% 50%;
-
-    --radius: 0.75rem;
-
-    --sidebar-background: 220 20% 8%;
-    --sidebar-foreground: 45 30% 80%;
-    --sidebar-primary: 45 70% 50%;
-    --sidebar-primary-foreground: 220 40% 10%;
-    --sidebar-accent: 220 15% 15%;
-    --sidebar-accent-foreground: 45 60% 50%;
-    --sidebar-border: 45 30% 30%;
-    --sidebar-ring: 45 70% 50%;
   }
 
   .dark {
-    --background: 220 20% 6%;
+    --background: 220 20% 3%;
     --foreground: 48 30% 90%;
-
-    --card: 220 20% 10%;
+    --card: 220 20% 6%;
     --card-foreground: 48 30% 90%;
-
-    --popover: 220 20% 10%;
-    --popover-foreground: 48 30% 90%;
-
-    --primary: 45 80% 60%;
+    --primary: 45 60% 40%;
     --primary-foreground: 220 40% 10%;
-
-    --secondary: 220 15% 15%;
+    --secondary: 220 10% 10%;
     --secondary-foreground: 48 30% 90%;
-
-    --muted: 220 15% 15%;
-    --muted-foreground: 45 30% 70%;
-
-    --accent: 45 60% 50%;
+    --accent: 45 50% 30%;
     --accent-foreground: 220 40% 10%;
-
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 45 30% 30%;
-    --input: 45 30% 30%;
-    --ring: 45 70% 50%;
   }
 }
 
@@ -130,6 +88,14 @@
 
   .luxury-button {
     @apply bg-gradient-to-r from-gold to-gold-light text-black hover:shadow-md hover:from-gold/90 hover:to-gold-light/90 transition-all duration-300;
+  }
+
+  .luxury-gold-gradient {
+    @apply bg-gradient-to-r from-gold/70 to-gold/90;
+  }
+
+  .dark-glass-card {
+    @apply bg-black/80 backdrop-blur-md border border-gold/30 shadow-glass;
   }
 }
 
