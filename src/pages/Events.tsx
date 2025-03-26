@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -122,6 +123,17 @@ const mockEvents = [
     date: "Jan 20 - Jan 22, 2024",
     parkingZones: 8,
     priceRange: "R550 - R1600",
+  },
+  {
+    id: 11,
+    title: "Ultra Music Festival South Africa 2025",
+    type: "Festivals",
+    image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+    city: "Cape Town",
+    venue: "Cape Town Stadium",
+    date: "May 9 - May 11, 2025",
+    parkingZones: 10,
+    priceRange: "R600 - R2000",
   }
 ];
 
