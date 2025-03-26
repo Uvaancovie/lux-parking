@@ -17,15 +17,15 @@ export const BlurCard: React.FC<BlurCardProps> = ({
   ...props
 }) => {
   const intensityClasses = {
-    light: "bg-white/50 backdrop-blur-xs shadow-glass-sm border-white/10",
-    medium: "bg-white/60 backdrop-blur-md shadow-glass border-white/20",
-    heavy: "bg-white/70 backdrop-blur-lg shadow-glass-lg border-white/30",
+    light: "bg-white/60 backdrop-blur-xs shadow-glass-sm border-white/20",
+    medium: "bg-white/70 backdrop-blur-md shadow-glass border-white/30",
+    heavy: "bg-white/80 backdrop-blur-lg shadow-glass-lg border-white/40",
   };
 
   return (
     <div
       className={cn(
-        "rounded-lg border transition-all duration-300",
+        "rounded-md border transition-all duration-300",
         intensityClasses[intensity],
         hover && "hover:-translate-y-1 hover:shadow-glass-lg",
         className

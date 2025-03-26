@@ -62,7 +62,18 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+                // Luxury specific colors
+                gold: {
+                    DEFAULT: '#d4af37',
+                    light: '#e6c458',
+                    dark: '#b3941f'
+                },
+                platinum: {
+                    DEFAULT: '#e5e4e2',
+                    light: '#f7f7f6',
+                    dark: '#c8c6c4'
+                }
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -137,7 +148,15 @@ export default {
 					'50%': {
 						opacity: '0.8'
 					}
-				}
+				},
+                'shimmer': {
+                    '0%': {
+                        backgroundPosition: '-100% 0'
+                    },
+                    '100%': {
+                        backgroundPosition: '200% 0'
+                    }
+                }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -147,23 +166,32 @@ export default {
 				'slide-in-right': 'slide-in-right 0.6s ease-out',
 				'slide-in-left': 'slide-in-left 0.6s ease-out',
 				'blur-in': 'blur-in 0.6s ease-out',
-				'pulse-soft': 'pulse-soft 3s infinite ease-in-out'
+				'pulse-soft': 'pulse-soft 3s infinite ease-in-out',
+                'shimmer': 'shimmer 2s infinite linear'
 			},
 			boxShadow: {
 				'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.07)',
 				'glass-sm': '0 4px 16px 0 rgba(31, 38, 135, 0.05)',
 				'glass-lg': '0 12px 48px 0 rgba(31, 38, 135, 0.10)',
 				'neu': '10px 10px 20px #d1d9e6, -10px -10px 20px #ffffff',
-				'neu-sm': '5px 5px 10px #d1d9e6, -5px -5px 10px #ffffff'
+				'neu-sm': '5px 5px 10px #d1d9e6, -5px -5px 10px #ffffff',
+                'luxury': '0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.05)'
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 				'gradient-dots': 'radial-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px)',
-				'noise': "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E\")"
+				'noise': "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E\")",
+                'luxury-gradient': 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)'
 			},
 			backdropBlur: {
 				'xs': '2px',
-			}
+			},
+            letterSpacing: {
+                'widest': '0.2em'
+            },
+            fontFamily: {
+                sans: ['Inter', 'system-ui', 'sans-serif'],
+            }
 		}
 	},
 	plugins: [require("tailwindcss-animate")],

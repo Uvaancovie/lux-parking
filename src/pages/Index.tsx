@@ -8,24 +8,25 @@ import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import BlurCard from "@/components/ui/BlurCard";
 import { Link } from "react-router-dom";
+import { Diamond } from "lucide-react";
 
 const testimonials = [
   {
     name: "Sarah Johnson",
     role: "Regular Attendee",
-    quote: "ParkReserve has completely transformed my event experience. No more circling around for parking - I book in advance and drive straight to my spot.",
+    quote: "Lux Park has completely transformed my event experience. No more searching for parking - I arrive directly to my reserved spot in complete luxury.",
     avatar: "https://randomuser.me/api/portraits/women/32.jpg"
   },
   {
     name: "Michael Davis",
     role: "Car Enthusiast",
-    quote: "As someone who loves showing off my ride, I appreciate the premium zones. Worth every cent for the convenience and visibility.",
+    quote: "As someone who takes pride in my vehicle, I appreciate the premium zones. The presentation and security of my car is paramount, and Lux Park delivers.",
     avatar: "https://randomuser.me/api/portraits/men/41.jpg"
   },
   {
     name: "Emma Calitz",
     role: "Festival Organizer",
-    quote: "The integration with our event management system is seamless. Our attendees love the convenience, and it's reduced our parking headaches significantly.",
+    quote: "The integration with our event management system is seamless. Our VIP guests constantly praise the convenience and exclusivity of the service.",
     avatar: "https://randomuser.me/api/portraits/women/68.jpg"
   }
 ];
@@ -64,11 +65,16 @@ const Index: React.FC = () => {
         
         {/* Popular Cities Section */}
         <section className="py-24 bg-background relative">
-          <div className="container mx-auto px-4">
+          <div className="absolute inset-0 opacity-5 bg-[linear-gradient(40deg,#6e6cd8,#4b4dbb,#3d3ddb)]"></div>
+          <div className="container mx-auto px-4 relative">
             <div className="text-center max-w-2xl mx-auto mb-16">
-              <h2 className="text-3xl font-bold mb-4">Popular Cities</h2>
+              <div className="inline-flex items-center gap-2 mb-4">
+                <Diamond className="h-4 w-4 text-primary" />
+                <span className="text-sm uppercase tracking-widest text-primary font-medium">Exclusive Locations</span>
+              </div>
+              <h2 className="text-3xl font-light tracking-tight mb-4">Premium Parking in Elite Cities</h2>
               <p className="text-muted-foreground">
-                Discover events in major cities across South Africa
+                Discover curated events in South Africa's most prestigious locations
               </p>
             </div>
             
@@ -88,8 +94,8 @@ const Index: React.FC = () => {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                     </div>
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                      <h3 className="text-xl font-semibold mb-2">{city.name}</h3>
-                      <p className="text-white/80 text-sm">{city.eventCount} upcoming events</p>
+                      <h3 className="text-xl font-light mb-2">{city.name}</h3>
+                      <p className="text-white/90 text-sm">{city.eventCount} exclusive events</p>
                     </div>
                   </BlurCard>
                 </Link>
@@ -99,12 +105,16 @@ const Index: React.FC = () => {
         </section>
         
         {/* Testimonials Section */}
-        <section className="py-24 bg-secondary/50 relative">
-          <div className="container mx-auto px-4">
+        <section className="py-24 bg-secondary/30 relative">
+          <div className="container mx-auto px-4 relative">
             <div className="text-center max-w-2xl mx-auto mb-16">
-              <h2 className="text-3xl font-bold mb-4">What Our Users Say</h2>
+              <div className="inline-flex items-center gap-2 mb-4">
+                <Diamond className="h-4 w-4 text-primary" />
+                <span className="text-sm uppercase tracking-widest text-primary font-medium">Client Experiences</span>
+              </div>
+              <h2 className="text-3xl font-light tracking-tight mb-4">Exceptional Service Testimonials</h2>
               <p className="text-muted-foreground">
-                Don't just take our word for it - hear from our community
+                Hear from our discerning clientele about their premium parking experiences
               </p>
             </div>
             
@@ -112,7 +122,7 @@ const Index: React.FC = () => {
               {testimonials.map((testimonial, index) => (
                 <BlurCard 
                   key={index} 
-                  className="p-6 hover:border-primary/20"
+                  className="p-8 hover:border-primary/20"
                   intensity="medium"
                   hover
                 >
@@ -120,7 +130,7 @@ const Index: React.FC = () => {
                     <img 
                       src={testimonial.avatar} 
                       alt={testimonial.name} 
-                      className="w-12 h-12 rounded-full"
+                      className="w-14 h-14 rounded-full object-cover border-2 border-white/50"
                     />
                     <div className="ml-4">
                       <h3 className="font-medium">{testimonial.name}</h3>
@@ -132,7 +142,7 @@ const Index: React.FC = () => {
                       <span key={i} className="mr-1">★</span>
                     ))}
                   </div>
-                  <p className="text-muted-foreground">"{testimonial.quote}"</p>
+                  <p className="text-muted-foreground italic">&ldquo;{testimonial.quote}&rdquo;</p>
                 </BlurCard>
               ))}
             </div>
@@ -140,23 +150,27 @@ const Index: React.FC = () => {
         </section>
         
         {/* CTA Section */}
-        <section className="py-20 bg-primary/5 relative overflow-hidden">
+        <section className="py-24 bg-primary/5 relative overflow-hidden">
           <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
           
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Ready to Elevate Your Event Experience?
+              <div className="inline-flex items-center gap-2 mb-6">
+                <Diamond className="h-5 w-5 text-primary" />
+                <span className="text-sm uppercase tracking-widest text-primary font-medium">Elevate Your Experience</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-light tracking-tight mb-6">
+                Reserve Your Premium Parking Experience
               </h2>
               <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Join thousands of event-goers who've already transformed their parking experience. 
-                Book your spot now and focus on enjoying the event, not finding parking.
+                Join our discerning clientele who value convenience, security, and prestige. 
+                Reserve your spot now and experience the Lux Park difference.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="rounded-full px-8" asChild>
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                <Button size="lg" className="rounded-none px-8 shadow-md" asChild>
                   <Link to="/events">Browse Events</Link>
                 </Button>
-                <Button variant="outline" size="lg" className="rounded-full px-8" asChild>
+                <Button variant="outline" size="lg" className="rounded-none px-8" asChild>
                   <Link to="/signup">Create Account</Link>
                 </Button>
               </div>

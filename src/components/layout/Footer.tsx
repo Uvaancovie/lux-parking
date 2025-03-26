@@ -1,24 +1,25 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
+import { Diamond } from "lucide-react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="py-12 bg-secondary">
+    <footer className="py-16 bg-secondary/60">
       <div className="container px-4 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <Link to="/" className="text-xl font-semibold tracking-tight flex items-center gap-2">
-              <span className="text-primary font-bold">Park</span>
-              <span>Reserve</span>
+            <Link to="/" className="text-xl tracking-widest flex items-center gap-2">
+              <Diamond size={24} className="text-primary" />
+              <span className="font-light">LUX <span className="font-semibold">PARK</span></span>
             </Link>
-            <p className="text-muted-foreground text-sm">
-              The simplest way to book premium parking for events across South Africa.
+            <p className="text-muted-foreground text-sm font-light">
+              Experience exclusive premium parking for elite events across South Africa.
             </p>
           </div>
           
           <div>
-            <h4 className="font-medium mb-4 text-sm tracking-wide uppercase text-muted-foreground">Quick Links</h4>
+            <h4 className="font-medium mb-4 text-sm tracking-widest uppercase text-muted-foreground">Quick Links</h4>
             <ul className="space-y-2">
               <li>
                 <Link to="/" className="text-foreground/80 hover:text-primary transition-colors text-sm">
@@ -27,7 +28,7 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <Link to="/events" className="text-foreground/80 hover:text-primary transition-colors text-sm">
-                  Find Events
+                  Discover Events
                 </Link>
               </li>
               <li>
@@ -44,7 +45,7 @@ const Footer: React.FC = () => {
           </div>
           
           <div>
-            <h4 className="font-medium mb-4 text-sm tracking-wide uppercase text-muted-foreground">Support</h4>
+            <h4 className="font-medium mb-4 text-sm tracking-widest uppercase text-muted-foreground">Support</h4>
             <ul className="space-y-2">
               <li>
                 <Link to="/faq" className="text-foreground/80 hover:text-primary transition-colors text-sm">
@@ -70,12 +71,12 @@ const Footer: React.FC = () => {
           </div>
           
           <div>
-            <h4 className="font-medium mb-4 text-sm tracking-wide uppercase text-muted-foreground">Contact</h4>
+            <h4 className="font-medium mb-4 text-sm tracking-widest uppercase text-muted-foreground">Contact</h4>
             <ul className="space-y-2">
               <li className="flex items-center gap-2 text-sm text-foreground/80">
                 <span>Email:</span>
-                <a href="mailto:info@parkreserve.com" className="hover:text-primary transition-colors">
-                  info@parkreserve.com
+                <a href="mailto:concierge@luxpark.com" className="hover:text-primary transition-colors">
+                  concierge@luxpark.com
                 </a>
               </li>
               <li className="flex items-center gap-2 text-sm text-foreground/80">
@@ -106,8 +107,8 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="mt-12 border-t border-border pt-8 text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} ParkReserve. All rights reserved.</p>
+        <div className="mt-16 border-t border-border pt-8 text-center text-sm text-muted-foreground">
+          <p>© {new Date().getFullYear()} Lux Park. All rights reserved.</p>
         </div>
       </div>
     </footer>

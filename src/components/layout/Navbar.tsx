@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { Diamond } from "lucide-react";
 
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -33,7 +34,7 @@ const Navbar: React.FC = () => {
       <Link
         to={to}
         className={cn(
-          "relative px-3 py-2 text-sm font-medium transition-colors",
+          "relative px-3 py-2 text-sm font-light tracking-wide transition-colors",
           isActive 
             ? "text-primary" 
             : "text-foreground/80 hover:text-foreground"
@@ -52,7 +53,7 @@ const Navbar: React.FC = () => {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled 
-          ? "bg-background/80 backdrop-blur-md shadow-sm" 
+          ? "bg-background/90 backdrop-blur-md shadow-sm" 
           : "bg-transparent"
       )}
     >
@@ -60,14 +61,14 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-between">
           <Link 
             to="/" 
-            className="text-xl font-semibold tracking-tight flex items-center gap-2"
+            className="text-xl tracking-widest flex items-center gap-2"
           >
-            <span className="text-primary font-bold">Park</span>
-            <span>Reserve</span>
+            <Diamond size={24} className="text-primary" />
+            <span className="font-light">LUX <span className="font-semibold">PARK</span></span>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-2">
+          <nav className="hidden md:flex items-center space-x-6">
             <NavLink to="/">Home</NavLink>
             <NavLink to="/events">Events</NavLink>
             <NavLink to="/how-it-works">How It Works</NavLink>
@@ -75,10 +76,10 @@ const Navbar: React.FC = () => {
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" size="sm" asChild>
+            <Button variant="outline" size="sm" className="px-5 rounded-none" asChild>
               <Link to="/login">Login</Link>
             </Button>
-            <Button size="sm" className="rounded-full px-4" asChild>
+            <Button size="sm" className="px-5 rounded-none shadow-sm" asChild>
               <Link to="/signup">Sign Up</Link>
             </Button>
           </div>
