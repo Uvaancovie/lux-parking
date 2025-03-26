@@ -72,7 +72,7 @@ const Navbar: React.FC = () => {
             <NavLink to="/">Home</NavLink>
             <NavLink to="/events">Events</NavLink>
             <NavLink to="/how-it-works">How It Works</NavLink>
-            <NavLink to="/about">About</NavLink>
+            <NavLink to="/contact">Contact</NavLink>
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
@@ -124,7 +124,7 @@ const Navbar: React.FC = () => {
             <NavLink to="/">Home</NavLink>
             <NavLink to="/events">Events</NavLink>
             <NavLink to="/how-it-works">How It Works</NavLink>
-            <NavLink to="/about">About</NavLink>
+            <NavLink to="/contact">Contact</NavLink>
             <div className="pt-2 flex flex-col space-y-2">
               <Button variant="outline" size="sm" asChild className="justify-center">
                 <Link to="/login">Login</Link>
