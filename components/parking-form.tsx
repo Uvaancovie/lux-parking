@@ -39,7 +39,7 @@ const formSchema = z.object({
   }),
 
   // Additional Details
-  popularity: z.coerce.number().int().min(1).max(100).default(50),
+  popularity: z.coerce.number().int().min(1).max(100),
 })
 
 export default function EventForm() {
@@ -68,7 +68,7 @@ export default function EventForm() {
       }
 
       // Insert data into Supabase events table
-      const { data, error } = await supabase.from("events").insert([formattedValues]).select()
+      const { error } = await supabase.from("events").insert([formattedValues]).select()
 
       if (error) throw error
 
@@ -90,12 +90,12 @@ export default function EventForm() {
 
   const nextStep = async () => {
     if (step === 1) {
-      const eventFields = ["name", "description", "event_date"]
-      const result = await form.trigger(eventFields as any)
+      const eventFields = ["name", "description", "event_date"] as const
+      const result = await form.trigger(Array.from(eventFields))
       if (!result) return
     } else if (step === 2) {
-      const locationFields = ["location", "city"]
-      const result = await form.trigger(locationFields as any)
+      const locationFields = ["location", "city"] as const
+      const result = await form.trigger(locationFields)
       if (!result) return
     }
 
