@@ -16,19 +16,13 @@
     "incremental": true,
     "plugins": [
       {
-        "name": "next"
+        "name": "next",
+        
       }
     ],
     "paths": {
       "@/*": ["./*"],
-      "@components/*": ["./components/*"],
-      "@hooks/*": ["./hooks/*"],
-      "@lib/*": ["./lib/*"],
-      "@styles/*": ["./styles/*"],
-      "@public/*": ["./public/*"],
-      "@pages/*": ["./pages/*"],
-      "@types/*": ["./types/*"],  
-      
+     
     
     }
   },
