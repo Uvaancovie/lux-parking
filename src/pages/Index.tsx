@@ -10,26 +10,7 @@ import BlurCard from "@/components/ui/BlurCard";
 import { Link } from "react-router-dom";
 import { Diamond } from "lucide-react";
 
-const testimonials = [
-  {
-    name: "Sarah Johnson",
-    role: "Regular Attendee",
-    quote: "Lux Park has completely transformed my event experience. No more searching for parking - I arrive directly to my reserved spot in complete luxury.",
-    avatar: "https://randomuser.me/api/portraits/women/32.jpg"
-  },
-  {
-    name: "Michael Davis",
-    role: "Car Enthusiast",
-    quote: "As someone who takes pride in my vehicle, I appreciate the premium zones. The presentation and security of my car is paramount, and Lux Park delivers.",
-    avatar: "https://randomuser.me/api/portraits/men/41.jpg"
-  },
-  {
-    name: "Emma Calitz",
-    role: "Festival Organizer",
-    quote: "The integration with our event management system is seamless. Our VIP guests constantly praise the convenience and exclusivity of the service.",
-    avatar: "https://randomuser.me/api/portraits/women/68.jpg"
-  }
-];
+
 
 const cities = [
   {
@@ -104,50 +85,7 @@ const Index: React.FC = () => {
           </div>
         </section>
         
-        {/* Testimonials Section */}
-        <section className="py-24 bg-secondary/30 relative">
-          <div className="container mx-auto px-4 relative">
-            <div className="text-center max-w-2xl mx-auto mb-16">
-              <div className="inline-flex items-center gap-2 mb-4">
-                <Diamond className="h-4 w-4 text-primary" />
-                <span className="text-sm uppercase tracking-widest text-primary font-medium">Client Experiences</span>
-              </div>
-              <h2 className="text-3xl font-light tracking-tight mb-4">Exceptional Service Testimonials</h2>
-              <p className="text-muted-foreground">
-                Hear from our discerning clientele about their premium parking experiences
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
-                <BlurCard 
-                  key={index} 
-                  className="p-8 hover:border-primary/20"
-                  intensity="medium"
-                  hover
-                >
-                  <div className="flex items-center mb-6">
-                    <img 
-                      src={testimonial.avatar} 
-                      alt={testimonial.name} 
-                      className="w-14 h-14 rounded-full object-cover border-2 border-white/50"
-                    />
-                    <div className="ml-4">
-                      <h3 className="font-medium">{testimonial.name}</h3>
-                      <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                    </div>
-                  </div>
-                  <div className="mb-4 text-primary">
-                    {[...Array(5)].map((_, i) => (
-                      <span key={i} className="mr-1">★</span>
-                    ))}
-                  </div>
-                  <p className="text-muted-foreground italic">&ldquo;{testimonial.quote}&rdquo;</p>
-                </BlurCard>
-              ))}
-            </div>
-          </div>
-        </section>
+       
         
         {/* CTA Section */}
         <section className="py-24 bg-primary/5 relative overflow-hidden">
