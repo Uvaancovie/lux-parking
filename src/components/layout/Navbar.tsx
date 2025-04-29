@@ -71,7 +71,7 @@ const Navbar: React.FC = () => {
           <nav className="hidden md:flex items-center space-x-6">
             <NavLink to="/">Home</NavLink>
             <NavLink to="/events">Events</NavLink>
-           
+            <NavLink to="/how-it-works">How It Works</NavLink>
             <NavLink to="/contact">Contact</NavLink>
           </nav>
 
