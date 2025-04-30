@@ -1,9 +1,7 @@
 // src/app/actions.ts
 "use server";
 
-import { neon } from "@neondatabase/serverless";
-
-const sql = neon(process.env.DATABASE_URL!);
+import { sql } from "@/db/db";
 
 export async function createBooking(data: {
   eventId: number;
@@ -23,7 +21,6 @@ export async function createBooking(data: {
         ${data.carMake}, ${data.carColor}, ${data.userEmail}
       )
     `;
-
     return { success: true };
   } catch (error) {
     console.error("Booking insert failed:", error);
