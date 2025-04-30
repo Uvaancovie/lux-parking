@@ -1,4 +1,4 @@
-
+'use client'
 import React, { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import Navbar from "@/components/layout/Navbar";
@@ -10,6 +10,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import { createBooking } from "@/app/actions/actions";
 
 // Mock event data
 const mockEvent = {
@@ -130,22 +131,21 @@ const EventDetail: React.FC = () => {
     }
   };
   
-  const handleBooking = () => {
-    // In a real app, we would process the payment and create a booking
-    toast({
-      title: "Booking Successful!",
-      description: "Your parking has been reserved. Check your email for confirmation.",
+  const handleBooking = async () => {
+    const result = await createBooking({
+      eventId: 1,
+      zoneId: "A",
+      licensePlate: "XYZ123",
+      carMake: "Toyota",
+      carColor: "Blue",
+      userEmail: "user@example.com",
     });
-    
-    // Reset form state
-    setSelectedZone(null);
-    setCarDetails({
-      licensePlate: "",
-      make: "",
-      color: ""
-    });
-    setBookingStep(1);
-    setActiveTab("info");
+  
+    if (result.success) {
+      // Show success toast
+    } else {
+      // Show error toast
+    }
   };
   
   const selectedZoneData = selectedZone 
